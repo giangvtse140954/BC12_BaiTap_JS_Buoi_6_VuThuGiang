@@ -52,14 +52,16 @@ function tinhGiaiThua(e) {
 // bai 4
 function taoDiv() {
   var showcase = getEle('showcase');
-  var div = document.createElement('div');
-  for (var k = 1; k <= 10; k++) {
-    console.log(k % 2);
+  for (var k = 1; k <= 9; k++) {
     if (k % 2 === 0) {
-      div.innerHTML = `<div style="background-color: red;">${k}</div>`;
+      var div = document.createElement('div');
+
+      div.innerHTML = `<div style="background-color: red;">Div chẵn ${k}</div>`;
       showcase.appendChild(div);
     } else {
-      div.innerHTML = `<div style="background-color: blue;">${k}</div>`;
+      var div = document.createElement('div');
+
+      div.innerHTML = `<div style="background-color: blue;">Div lẻ ${k}</div>`;
       showcase.appendChild(div);
     }
   }
