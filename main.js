@@ -31,4 +31,36 @@ function tinhTong(e) {
 }
 
 // bai 3
-var num = 6;
+function tinhGiaiThua(e) {
+  e.preventDefault();
+  var bai3 = getEle('bai3');
+  var numn = getEle('numn').value;
+
+  if (numn === '') {
+    bai3.innerHTML = 'Vui lòng nhập số n';
+  } else if (numn <= 0) {
+    bai3.innerHTML = 'Vui lòng nhập số n lớn hơn 0';
+  } else {
+    var r = 1;
+    for (var j = 1; j <= numn; j++) {
+      r = r * j;
+    }
+    bai3.innerHTML = `Kết quả giai thừa là ${r}`;
+  }
+}
+
+// bai 4
+function taoDiv() {
+  var showcase = getEle('showcase');
+  var div = document.createElement('div');
+  for (var k = 1; k <= 10; k++) {
+    console.log(k % 2);
+    if (k % 2 === 0) {
+      div.innerHTML = `<div style="background-color: red;">${k}</div>`;
+      showcase.appendChild(div);
+    } else {
+      div.innerHTML = `<div style="background-color: blue;">${k}</div>`;
+      showcase.appendChild(div);
+    }
+  }
+}
